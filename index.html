@@ -11,10 +11,16 @@
     rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smartos Superadmin</title>
-  <script>
+  <script type="module">
     if (global === undefined) var global = window;
     if (require === undefined) var require = {};
     if (exports === undefined) var exports = {};
+    import RefreshRuntime from "/@react-refresh"
+    RefreshRuntime.injectIntoGlobalHook(window)
+    window.$RefreshReg$ = () => { }
+    window.$RefreshSig$ = () => (type) => type
+    window.__vite_plugin_react_preamble_installed__ = true
+
   </script>
 </head>
 
