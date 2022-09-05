@@ -12,18 +12,18 @@ const uploadFile = async ({
   onUploadProgress,
 }: UploadFile) =>
   axios({
-    method: 'PUT',
-    url: signedRequest,
     data: file,
     headers: {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       'Content-Type': file.type,
     },
+    method: 'PUT',
     onUploadProgress: progressEvent => {
       onUploadProgress?.(
         Math.round((progressEvent.loaded * 100) / progressEvent.total),
       );
     },
+    url: signedRequest,
   });
 
 export default uploadFile;

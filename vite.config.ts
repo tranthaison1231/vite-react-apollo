@@ -7,7 +7,6 @@ import lessToJS from 'less-vars-to-js';
 import viteSentry from 'vite-plugin-sentry';
 import viteAntdDayjs from 'vite-plugin-antd-dayjs';
 import react from '@vitejs/plugin-react';
-import VitePluginHtmlEnv from 'vite-plugin-html-env';
 import svgr from 'vite-plugin-svgr';
 
 const themeVariables = lessToJS(
@@ -17,14 +16,26 @@ const themeVariables = lessToJS(
   ),
 );
 
+function htmlPlugin(env: Record<string, string | undefined>) {
+  return {
+    name: 'html-transform',
+    transformIndexHtml: {
+      enforce: 'pre',
+      transform: (html: string) => {
+        return html.replace(/<%=(.*?)%>/g, (match, p1) => env[p1] ?? match);
+      },
+    },
+  };
+}
+
 export default ({ mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
   return defineConfig({
     plugins: [
+      htmlPlugin(process.env),
       svgr(),
       react(),
       viteAntdDayjs(),
-      VitePluginHtmlEnv(),
       viteSentry({
         url: process.env.SENTRY_URL,
         authToken: process.env.SENTRY_AUTH_TOKEN,
@@ -79,7 +90,7 @@ export default ({ mode }) => {
       ],
     },
     optimizeDeps: {
-      include: ['@ant-design/icons', '@ant-design/icons'],
+      include: ['@ant-design/icons'],
     },
     build: {
       sourcemap: false,

@@ -7,15 +7,15 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    fallbackLng: 'en',
+    interpolation: {
+      escapeValue: false,
+    },
+    lng: localStorage.getItem('locale') || 'en',
     resources: {
       en: {
         translation: enLocale,
       },
-    },
-    lng: localStorage.getItem('locale') || 'en',
-    fallbackLng: 'en',
-    interpolation: {
-      escapeValue: false,
     },
   });
 

@@ -9,36 +9,36 @@ const ResetPassword = loadable(import('../pages/ResetPassword'));
 const App = () => {
   const routes = useRoutes([
     {
-      path: 'login',
       element: (
         <GuardRoute>
           <Login />
         </GuardRoute>
       ),
+      path: 'login',
     },
     {
-      path: '/forgot-password',
       element: (
         <GuardRoute>
           <ForgotPassword />
         </GuardRoute>
       ),
+      path: '/forgot-password',
     },
     {
-      path: '/reset-password',
       element: (
         <GuardRoute>
           <ResetPassword />
         </GuardRoute>
       ),
+      path: '/reset-password',
     },
     {
-      path: '/*',
       element: (
         <GuardRoute isPrivate>
           <div>Private Route</div>
         </GuardRoute>
       ),
+      path: '/*',
     },
   ]);
 

@@ -1,25 +1,25 @@
 import Logo from '#/assets/images/logo.png';
 
 export const formConfig = {
+  requiredMark: true,
   validateMessages: {
+    pattern: {
+      mismatch: '${label} is not valid!',
+    },
     required: 'Please enter ${label}!',
-    whitespace: ' ${label} cannot be empty!',
     string: {
-      min: '${label} must be miximun ${min} characters.',
       max: '${label} must be maximum ${max} characters.',
+      min: '${label} must be miximun ${min} characters.',
     },
     types: {
       number: '${label} must be number.',
     },
-    pattern: {
-      mismatch: '${label} is not valid!',
-    },
+    whitespace: ' ${label} cannot be empty!',
   },
-  requiredMark: true,
 };
 
 export const appConfig = {
-  name: 'smartos-super-admin',
   logo: Logo,
+  name: 'smartos-super-admin',
   title: '',
 };
