@@ -1,4 +1,4 @@
-import { AuthLayout } from '@base-projects/web-uikit';
+import { AuthLayout } from '@enouvo/react-uikit';
 
 function ChangePassword() {
   return <AuthLayout>ChangePassword</AuthLayout>;

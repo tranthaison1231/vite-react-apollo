@@ -1,4 +1,4 @@
-import { loadable } from '@base-projects/web-uikit';
+import { loadable } from '@enouvo/react-uikit';
 import { useRoutes } from 'react-router-dom';
 import GuardRoute from './GuardRoute';
 

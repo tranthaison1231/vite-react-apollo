@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Dictionary } from '@base-projects/web-uikit';
+import { Dictionary } from '@enouvo/react-uikit';
 import { TranslationKeys } from '#/src/generated/translationKeys';
 
 const useTypeSafeTranslation = () => {

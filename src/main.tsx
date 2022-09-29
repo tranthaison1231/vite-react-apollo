@@ -1,6 +1,5 @@
 import '#/configs/theme/index.less';
-import '#/shared/utils/style.css';
-import { getPopupContainer } from '@base-projects/web-uikit';
+import { getPopupContainer } from '@enouvo/react-uikit';
 import * as Sentry from '@sentry/react';
 import { ConfigProvider } from 'antd';
 import enUS from 'antd/es/locale/en_US';

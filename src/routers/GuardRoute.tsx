@@ -1,4 +1,4 @@
-import { Loading } from '@base-projects/web-uikit';
+import { Loading } from '@enouvo/react-uikit';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getToken } from '#/shared/utils/token';
