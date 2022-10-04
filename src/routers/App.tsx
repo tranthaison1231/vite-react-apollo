@@ -2,9 +2,9 @@ import { loadable } from '@enouvo/react-uikit';
 import { useRoutes } from 'react-router-dom';
 import GuardRoute from './GuardRoute';
 
-const Login = loadable(import('../pages/Login'));
-const ForgotPassword = loadable(import('../pages/ForgotPassword'));
-const ResetPassword = loadable(import('../pages/ResetPassword'));
+const Login = loadable(import('../pages/login'));
+const ForgotPassword = loadable(import('../pages/forgot-password'));
+const ResetPassword = loadable(import('../pages/reset-password'));
 
 const App = () => {
   const routes = useRoutes([

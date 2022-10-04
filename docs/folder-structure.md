@@ -33,30 +33,26 @@ This style guide is mostly based on the standards that are currently prevalent i
 │   │   └── client.tsx  # folder to config file client
 │   ├── pages          # folder to store all the pages
 │   │   └── account
-│   │   │   ├── components
-│   │   │   │   └── Account.tsx
-│   │   │   ├── hooks
-│   │   │   │   └── useAccount.ts
-│   │   │   └── utils
-│   │   │   └── index.tsx
-│   │   └── ...
+│   │   │   ├── info.tsx
+│   │   └── forgot-password.tsx
 │   ├── shared          # folder to shared
 │   │   ├── components
-│   │   │   └── Commmon
+│   │   │   └── commmon
 │   │   │       └── Loading.tsx
-│   │   │   └── Form
+│   │   │   └── forms
 │   │   │       └── EditForm.tsx
-│   │   │   └── Layout
-│   │   │       └── PrivateLayout.tsx
-│   │   │   └── Modal # store all modal here
+│   │   │   └── modals # store all modal here
 │   │   │       └── ManageUserModal.tsx
-│   │   │   └── Selector  # store all selector here
+│   │   │   └── selectors  # store all selector here
 │   │   │       └── UserSelector.tsx
+│   │   │   └── user  # store all component for module user
+│   │   │       └── UserInfo.tsx
 │   │   ├── hooks
 │   │   ├── i18n
 │   │   ├── routes
 │   │   ├── utils
-│   │   └── ...
+│   │   ├── layouts
+│   │   │   └── PrivateLayout.tsx
 │   └── App.tsx      # App entry point
 │   └── main.tsx     # main entry point
 ├── .gitignore
