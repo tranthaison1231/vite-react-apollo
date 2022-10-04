@@ -24,7 +24,6 @@ This style guide is mostly based on the standards that are currently prevalent i
 │   │   └── ...
 │   ├── generated   # folder for generated files, please ignore it 
 │   ├── graphql   # folder to add all mutations and queries
-│   │   ├── user
 │   │   │   └── queries
 │   │   │      └── user.graphql
 │   │   │   └── mutations
@@ -35,6 +34,8 @@ This style guide is mostly based on the standards that are currently prevalent i
 │   │   └── account
 │   │   │   ├── info.tsx
 │   │   └── forgot-password.tsx
+│   ├── layouts
+│   │   └── PrivateLayout.tsx
 │   ├── shared          # folder to shared
 │   │   ├── components
 │   │   │   └── commmon
@@ -51,8 +52,6 @@ This style guide is mostly based on the standards that are currently prevalent i
 │   │   ├── i18n
 │   │   ├── routes
 │   │   ├── utils
-│   │   ├── layouts
-│   │   │   └── PrivateLayout.tsx
 │   └── App.tsx      # App entry point
 │   └── main.tsx     # main entry point
 ├── .gitignore

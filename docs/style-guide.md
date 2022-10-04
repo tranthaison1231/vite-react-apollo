@@ -18,7 +18,7 @@ This style guide is mostly based on the standards that are currently prevalent i
 
 Defining Functional Component instead of using React.FC<>.
 
-```
+```javascript
 // prefer
 const Greeting = ({ name }: GreetingProps) => {
   return <h1>Hello {name}</h1>
@@ -34,7 +34,7 @@ const Greeting:FC<GreetingProps> = ({ name }) => {
 
 - Component folder and filename: Use PascalCase for folder and filenames.
 
-  ```
+  ```javascript
   // good
   /ForgotPassword/ForgotPassword.tsx
 
@@ -44,7 +44,7 @@ const Greeting:FC<GreetingProps> = ({ name }) => {
 
 - Non-component folder and filename: Use dash `-` instead of underscore `_` as seperator.
 
-  ```
+  ```javaScript
   // good
   /forgot-password/forgot-password.service.ts
 
@@ -54,7 +54,7 @@ const Greeting:FC<GreetingProps> = ({ name }) => {
 
 - Local variable name: Use camel case
 
-  ```
+  ```javaScript
   // good
   const isPaymentCompleted = true;
   let isPaymentCompleted = true;
@@ -66,7 +66,7 @@ const Greeting:FC<GreetingProps> = ({ name }) => {
 
 - Constant variable name: Use all upper cases separate by underscore \_
 
-  ```
+  ```javaScript
   // good
   const MIN_FILE_SIZE_IN_KB = 1000 * 1;
 
@@ -76,7 +76,7 @@ const Greeting:FC<GreetingProps> = ({ name }) => {
 
 - interface name: Do NOT prefix with I
 
-  ```
+  ```javaScript
   // goood
   interface SomeObject = {};
 
