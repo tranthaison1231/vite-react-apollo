@@ -8,12 +8,16 @@ import viteSentry from 'vite-plugin-sentry';
 import viteAntdDayjs from 'vite-plugin-antd-dayjs';
 import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
+import pages from 'vite-plugin-pages';
 
 const themeVariables = lessToJS(
   fs.readFileSync(
-    path.resolve(__dirname, './src/configs/theme/index.less'),
+    path.resolve(__dirname, './src/assets/css/variables.less'),
     'utf8',
   ),
+  {
+    stripPrefix: true,
+  },
 );
 
 function htmlPlugin(env: Record<string, string | undefined>) {
@@ -34,6 +38,11 @@ export default ({ mode }) => {
     plugins: [
       htmlPlugin(process.env),
       svgr(),
+      pages({
+        routeStyle: 'next',
+        dirs: 'src/pages',
+        importMode: 'async',
+      }),
       react(),
       viteAntdDayjs(),
       viteSentry({
@@ -86,7 +95,7 @@ export default ({ mode }) => {
           find: /^#/,
           replacement: path.resolve(__dirname, 'src'),
         },
-        { find: /^~/, replacement: '' },
+        { find: /^~antd/, replacement: 'antd' },
       ],
     },
     optimizeDeps: {

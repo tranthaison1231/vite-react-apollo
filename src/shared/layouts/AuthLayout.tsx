@@ -16,7 +16,7 @@ function AuthLayout({ children }: Props) {
           lg={12}
           md={0}
           xs={0}
-          className="flex h-screen justify-center bg-color-gray-10"
+          className="bg-color-gray-10 flex h-screen justify-center"
         >
           <Row align="middle">
             <Col>
