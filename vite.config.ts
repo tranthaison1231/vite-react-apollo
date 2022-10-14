@@ -41,7 +41,6 @@ export default ({ mode }) => {
       pages({
         routeStyle: 'next',
         dirs: 'src/pages',
-        importMode: 'async',
       }),
       react(),
       viteAntdDayjs(),
@@ -64,6 +63,7 @@ export default ({ mode }) => {
         },
       }),
       vitePluginImp({
+        optimize: true,
         libList: [
           {
             libName: 'antd',
@@ -87,10 +87,6 @@ export default ({ mode }) => {
     },
     resolve: {
       alias: [
-        {
-          find: './runtimeConfig',
-          replacement: './runtimeConfig.browser',
-        },
         {
           find: /^#/,
           replacement: path.resolve(__dirname, 'src'),
