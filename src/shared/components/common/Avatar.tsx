@@ -1,4 +1,5 @@
-import { Avatar as AntdAvatar, AvatarProps } from 'antd';
+import type { AvatarProps } from 'antd';
+import { Avatar as AntdAvatar } from 'antd';
 import DefaultPersonAvatar from '#/assets/images/avatar.png';
 import DefaultImage from '#/assets/images/default.png';
 

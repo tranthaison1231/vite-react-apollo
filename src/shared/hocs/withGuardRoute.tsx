@@ -29,7 +29,7 @@ function withGuardRoute<T extends object>(
     }, [navigate]);
 
     if (loading) return <Loading />;
-    return <WrappedComponent {...(props as T)} />;
+    return <WrappedComponent {...props} />;
   };
 }
 

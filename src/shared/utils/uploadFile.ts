@@ -20,8 +20,8 @@ const uploadFile = async ({
     method: 'PUT',
     onUploadProgress: progressEvent => {
       onUploadProgress?.(
-        progressEvent?.total
-          ? Math.round((progressEvent.loaded * 100) / progressEvent?.total)
+        progressEvent.total
+          ? Math.round((progressEvent.loaded * 100) / progressEvent.total)
           : 0,
       );
     },
