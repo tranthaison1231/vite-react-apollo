@@ -1,4 +1,3 @@
-import './assets/css/index.less';
 import enUS from 'antd/es/locale/en_US';
 import { getPopupContainer } from '@enouvo/react-uikit';
 import * as Sentry from '@sentry/react';
@@ -9,6 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { formConfig } from './configs/config';
 import App from './App';
 import i18n from './shared/i18n';
+import 'antd/dist/reset.css';
 import './configs';
 
 createRoot(document.getElementById('root')!).render(
@@ -19,6 +19,11 @@ createRoot(document.getElementById('root')!).render(
         form={formConfig}
         getPopupContainer={getPopupContainer}
         locale={enUS}
+        theme={{
+          token: {
+            colorPrimary: '#00b96b',
+          },
+        }}
       >
         <BrowserRouter>
           <App />

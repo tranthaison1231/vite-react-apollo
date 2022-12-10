@@ -1,11 +1,11 @@
-import { AuthLayout } from '@enouvo/react-uikit';
-import { Button } from 'antd';
+import { Button, DatePicker } from 'antd';
 
 function Login() {
   return (
-    <AuthLayout>
+    <div>
       <Button type="primary"> Hello </Button>
-    </AuthLayout>
+      <DatePicker onChange={date => console.log(date)} />
+    </div>
   );
 }
 

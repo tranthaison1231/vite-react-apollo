@@ -1,30 +1,16 @@
 import path from 'path';
-import fs from 'fs';
 import { defineConfig, loadEnv } from 'vite';
-import vitePluginImp from 'vite-plugin-imp';
 import { visualizer } from 'rollup-plugin-visualizer';
-import lessToJS from 'less-vars-to-js';
 import viteSentry from 'vite-plugin-sentry';
-import viteAntdDayjs from 'vite-plugin-antd-dayjs';
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
 import svgr from 'vite-plugin-svgr';
 import pages from 'vite-plugin-pages';
-
-const themeVariables = lessToJS(
-  fs.readFileSync(
-    path.resolve(__dirname, './src/assets/css/variables.less'),
-    'utf8',
-  ),
-  {
-    stripPrefix: true,
-  },
-);
 
 function htmlPlugin(env: Record<string, string | undefined>) {
   return {
     name: 'html-transform',
     transformIndexHtml: {
-      enforce: 'pre',
+      enforce: 'pre' as const,
       transform: (html: string) => {
         return html.replace(/<%=(.*?)%>/g, (match, p1) => env[p1] ?? match);
       },
@@ -43,7 +29,6 @@ export default ({ mode }) => {
         dirs: 'src/pages',
       }),
       react(),
-      viteAntdDayjs(),
       viteSentry({
         url: process.env.SENTRY_URL,
         authToken: process.env.SENTRY_AUTH_TOKEN,
@@ -62,40 +47,14 @@ export default ({ mode }) => {
           urlPrefix: '~/assets',
         },
       }),
-      vitePluginImp({
-        optimize: true,
-        libList: [
-          {
-            libName: 'antd',
-            style: name => {
-              if (name === 'col' || name === 'row') {
-                return 'antd/lib/style/index.less';
-              }
-              return `antd/es/${name}/style/index.less`;
-            },
-          },
-        ],
-      }),
     ],
-    css: {
-      preprocessorOptions: {
-        less: {
-          javascriptEnabled: true,
-          modifyVars: themeVariables,
-        },
-      },
-    },
     resolve: {
       alias: [
         {
           find: /^#/,
           replacement: path.resolve(__dirname, 'src'),
         },
-        { find: /^~antd/, replacement: 'antd' },
       ],
-    },
-    optimizeDeps: {
-      include: ['@ant-design/icons'],
     },
     build: {
       sourcemap: false,
