@@ -1,9 +1,9 @@
 import { PageContainer } from '@ant-design/pro-layout';
 import { Card } from 'antd';
-import useTypeSafeTranslation from '#/shared/hooks/useTypeSafeTranslation';
+import { useTranslation } from 'react-i18next';
 
 function UserInfo() {
-  const { t } = useTypeSafeTranslation();
+  const { t } = useTranslation();
   return (
     <PageContainer
       header={{

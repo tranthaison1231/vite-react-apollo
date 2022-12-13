@@ -1,9 +1,9 @@
 import { Button, Result, Typography } from 'antd';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import useTypeSafeTranslation from '#/shared/hooks/useTypeSafeTranslation';
 
 function NotFoundPage() {
-  const { t } = useTypeSafeTranslation();
+  const { t } = useTranslation();
 
   return (
     <Result
