@@ -10,6 +10,7 @@
 - [x] [Typescript](https://www.typescriptlang.org/)
 - [x] [Tailwind](https://tailwindcss.com/)
 - [x] [Ant Design](https://ant.design/)
+- [x] AWS-CDK for deployment
 - [ ] Testing with Vitest
 
 ## Documentations
