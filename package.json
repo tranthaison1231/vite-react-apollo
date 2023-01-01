@@ -17,8 +17,8 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
-    "@ant-design/pro-card": "^2.1.7",
-    "@ant-design/pro-layout": "^7.5.0",
+    "@ant-design/pro-card": "^2.1.8",
+    "@ant-design/pro-layout": "^7.5.1",
     "@apollo/client": "3.7.3",
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.10.5",
@@ -27,7 +27,7 @@
     "@sentry/integrations": "^7.28.1",
     "@sentry/react": "^7.28.1",
     "@sentry/tracing": "^7.28.1",
-    "antd": "^5.1.1",
+    "antd": "^5.1.2",
     "apollo-link-error": "^1.1.13",
     "aws-amplify": "^5.0.8",
     "axios": "^1.2.1",
@@ -60,13 +60,13 @@
     "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react-swc": "^3.0.1",
     "autoprefixer": "^10.4.13",
-    "eslint": "^8.30.0",
+    "eslint": "^8.31.0",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "postcss": "^8.4.20",
     "prettier": "^2.8.1",
     "prettier-plugin-tailwindcss": "^0.2.1",
-    "rollup-plugin-visualizer": "^5.8.3",
+    "rollup-plugin-visualizer": "^5.9.0",
     "tailwindcss": "^3.2.4",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4",
@@ -79,7 +79,8 @@
     "vite.config.ts",
     "scripts/*",
     "country-schemas.tsx",
-    "src/vite-env.d.ts"
+    "src/vite-env.d.ts",
+    "infrastructure/*"
   ],
   "commitlint": {
     "extends": [
