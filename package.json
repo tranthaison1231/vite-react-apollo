@@ -33,7 +33,7 @@
     "axios": "^1.2.1",
     "dayjs": "^1.11.7",
     "graphql": "^16.6.0",
-    "i18next": "^22.4.6",
+    "i18next": "^22.4.8",
     "i18next-browser-languagedetector": "^7.0.1",
     "lodash-es": "^4.17.21",
     "react": "^18.2.0",
@@ -43,8 +43,8 @@
     "vite-plugin-pages": "^0.28.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
+    "@commitlint/cli": "^17.4.0",
+    "@commitlint/config-conventional": "^17.4.0",
     "@enouvo/eslint-config-react": "^1.6.0",
     "@graphql-codegen/cli": "^2.16.2",
     "@graphql-codegen/fragment-matcher": "^3.3.3",
@@ -61,7 +61,7 @@
     "@vitejs/plugin-react-swc": "^3.0.1",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.31.0",
-    "husky": "^8.0.2",
+    "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "postcss": "^8.4.20",
     "prettier": "^2.8.1",
@@ -70,7 +70,7 @@
     "tailwindcss": "^3.2.4",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4",
-    "vite": "^4.0.3",
+    "vite": "^4.0.4",
     "vite-plugin-react-layouts": "^0.0.1",
     "vite-plugin-sentry": "^1.1.7",
     "vite-plugin-svgr": "^2.4.0"
